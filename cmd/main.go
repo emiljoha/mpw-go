@@ -9,7 +9,6 @@ import (
 	"strings"
 
 	mpw "github.com/emiljoha/mpw-go/internal"
-	paste "github.com/emiljoha/mpw-go/internal/copy"
 	"golang.org/x/term"
 )
 
@@ -72,10 +71,6 @@ func main() {
 		os.Exit(1)
 	}
 	fmt.Println(sitePassword)
-	err = paste.WriteText(sitePassword)
-	if err != nil {
-		fmt.Printf("copy to clipboard failed: %s", err.Error())
-	}
 }
 
 func input(prompt string) (string, error) {
