@@ -3,8 +3,11 @@ module github.com/emiljoha/mpw-go
 go 1.19
 
 require (
+	github.com/rajveermalviya/go-wayland/wayland v0.0.0-20230130181619-0ad78d1310b2
 	github.com/stretchr/testify v1.8.4
 	golang.org/x/crypto v0.17.0
+	golang.org/x/sys v0.15.0
+	golang.org/x/term v0.15.0
 )
 
 require (

@@ -128,7 +128,7 @@ func siteKey(siteName string, masterKey []byte, counter uint) ([]byte, error) {
 type ResultType string
 type templaceCharacter rune
 type template []templaceCharacter
-var templateDictionary map[ResultType][]template = map[ResultType][]template{
+var TemplateDictionary map[ResultType][]template = map[ResultType][]template{
 	"Maximum": {
 		{'a','n','o','x','x','x','x','x','x','x','x','x','x','x','x','x','x','x','x','x'},
 		{'a','x','x','x','x','x','x','x','x','x','x','x','x','x','x','x','x','x','n','o'},
@@ -216,7 +216,7 @@ var templateCharsDictionary map[templaceCharacter][]string = map[templaceCharact
 // This password is then used to authenticate the user for his account at
 // this site.
 func password(siteKey []byte, class ResultType) (string, error) {
-	templates, found := templateDictionary[class]
+	templates, found := TemplateDictionary[class]
 	if !found {
 		return "", fmt.Errorf("class %s not found", class)
 	}
